@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/00468662eb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <div id="header">
+        <div class="container">
+            <nav>
+            <img src="resources/Black Simple Script Travel Blogger Personal Name Logo.png" class="logo" alt="The logo of shellys name">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            </nav>
+            <div class="header-text">
+                <p>Front-End Dev</p>
+                <h1>Hi, i'm <span>Shelly</span>.</h1>
+            </div>
+
+        </div>
+   </div>
+   <!-----------about------------------>
+   <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="resources/about_2-transformed.png" alt="a picture of shelly">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium exercitationem ratione voluptatibus voluptate consequuntur, alias eveniet, quae in, vitae dolorum eligendi est tenetur. Explicabo, corrupti rem quae sit, at repellendus doloribus, vero nisi voluptas sequi maxime. Error aut aliquam iste odit magnam id facilis quaerat ratione porro eius assumenda totam vel aliquid quis, et tempora numquam quia, veritatis quisquam minus sapiente harum! Dicta at ducimus culpa et qui vel consequatur, recusandae minima hic consectetur dignissimos nihil nemo. Enim, aliquid debitis!</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>HTML</span><br>Web Development</li>
+                        <li><span>CSS</span><br>Web Development</li>
+                        <li><span>Javascript</span><br>Web Development</li>
+                        <li><span>Autocad</span><br>Architectural Drawing</li>
+                        <li><span>Google Sketchup</span><br>Architectural Drawing</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2023 - Current</span><br>Designing Web Interfaces</li>
+                        <li><span>2014 - Current</span><br>Raising Family</li>
+                        <li><span>2015 - 2020</span><br>Teaching German Language at ITB Bandung</li>
+                        <li><span>2012 - 2014</span><br>Learning German Language in Frankfurt, Germany</li>
+                        <li><span>2011 - 2012</span><br>Internship as Architect at Studiopadi Bandung</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2023 - 2024</span><br>Codecademy: Front-End Engineer Career Path Education</li>
+                        <li><span>2007 - 2011</span><br>Parahyangan Catholic University Bandung: Bachelor of Architecture</li>
+                        <li><span>2001 - 2007</span><br>Taruna Bakti High School</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+<!---------------services ----------->
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex id ipsam ab non voluptatibus itaque ea vel optio nostrum, natus velit quas suscipit dolorum quos?</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>UI/UX Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error sunt tempora ab? Blanditiis, iste illo inventore modi laborum placeat perferendis commodi neque voluptas accusantium, aliquam ducimus pariatur.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>App Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta excepturi ut, minus earum aspernatur dignissimos dolor illum fuga porro? Facere voluptatibus sequi at nesciunt quasi veritatis possimus enim cumque esse.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+   <script>
+    let tablinks = document.getElementsByClassName("tab-links");
+    let tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+   </script>
+</body>
+</html>
